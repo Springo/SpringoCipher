@@ -3,7 +3,9 @@
  */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
+#include "SpringoCipher.h"
 #define START 32
 #define SIZE 94
 
@@ -29,12 +31,12 @@ char* decryptText(char* text, char* key) {
 	char* keystart = key;
 	char* decrypted = (char*)malloc(strlen(text) + 1);
 	while (text != '\0') {
-		*decrypted = getRangeValue((getRawValue(*text) - *key);
+		*decrypted = getRangeValue(getRawValue(*text) - *key);
 		key++;
 		if (*key == '\0')
 			key = keystart;
 		text++;
-		encrypted++;
+		decrypted++;
 	}
 	return decrypted;
 }

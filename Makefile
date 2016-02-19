@@ -1,2 +1,2 @@
 all:
-	gcc -Wall -Werror SpringoCipher.c -o SpringoCipher
+	gcc -Wall -Werror SpringoCipher.c SpringoCipher.h -o SpringoCipher
